@@ -1,0 +1,49 @@
+{
+  "name": "bee-keeper",
+  "owner": {
+    "name": "Mr-Dazai"
+  },
+  "metadata": {
+    "description": "BeeKeeper-Kit: a per-project kit of default skills and mods (superpowers, karpathy guidelines, hive-router, agent-hud), with optional taste-skill and caveman picked by bee-scout.",
+    "version": "0.0.1"
+  },
+  "plugins": [
+    {
+      "name": "bee-keeper",
+      "source": "./plugins/bee-keeper",
+      "description": "Per-project kit: installs the default skills and mods, and bee-scout picks optional skills from your project's plan."
+    },
+    {
+      "name": "hive-router",
+      "source": "./mods/hive-router",
+      "description": "Picks each subagent's model and effort from the task, learns from runs that fall short (climbing Haiku, Sonnet, Opus, and to high effort), steps back down after a streak of successes, and reminds the main agent to delegate."
+    },
+    {
+      "name": "agent-hud",
+      "source": "./mods/agent-hud",
+      "description": "Context bar above the prompt plus an agents panel (/hud): the main agent and every subagent with an icon, active/idle state, context fill, tokens and estimated cost, and what the last completed task burned."
+    },
+    {
+      "name": "superpowers",
+      "source": { "source": "github", "repo": "obra/superpowers" },
+      "description": "Workflow skills: brainstorming, plans, TDD, debugging, verification."
+    },
+    {
+      "name": "andrej-karpathy-skills",
+      "source": { "source": "github", "repo": "multica-ai/andrej-karpathy-skills" },
+      "description": "Four coding guidelines: think first, simplicity, surgical changes, verifiable goals."
+    },
+    {
+      "name": "taste-skill",
+      "source": { "source": "github", "repo": "Leonxlnx/taste-skill" },
+      "description": "Frontend and web UI art direction with a browser check; needs Node 22+ and Chromium.",
+      "defaultEnabled": false
+    },
+    {
+      "name": "caveman",
+      "source": { "source": "github", "repo": "JuliusBrussee/caveman" },
+      "description": "Opt-in terse answers to save tokens; adds SessionStart and SubagentStart hooks.",
+      "defaultEnabled": false
+    }
+  ]
+}

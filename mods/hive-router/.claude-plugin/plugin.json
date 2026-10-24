@@ -1,0 +1,7 @@
+{
+  "name": "hive-router",
+  "version": "0.0.1",
+  "author": { "name": "Mr-Dazai" },
+  "description": "Picks each subagent's model and effort from the task, learns from runs that fall short (climbing Haiku \u2192 Sonnet \u2192 Opus, and to high effort), steps back down after a streak of successes, and reminds the main agent to delegate.",
+  "types": "./types/index.d.ts"
+}

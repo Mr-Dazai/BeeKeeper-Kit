@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "bee-keeper": {
+      "source": { "source": "github", "repo": "Mr-Dazai/BeeKeeper-Kit" }
+    }
+  },
+  "enabledPlugins": {
+    "bee-keeper@bee-keeper": true
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "version": 1,
+  "skills": [
+    {
+      "name": "superpowers",
+      "tier": "default",
+      "summary": "Workflow skills: brainstorming, plans, TDD, debugging, verification.",
+      "install": { "plugin": "superpowers@bee-keeper", "scope": "project" },
+      "requires": [],
+      "signals": { "files": [], "keywords": [] },
+      "optIn": false,
+      "notes": "Adds a SessionStart hook."
+    },
+    {
+      "name": "andrej-karpathy-skills",
+      "tier": "default",
+      "summary": "One small guideline skill: think first, keep it simple, make surgical changes, set verifiable goals.",
+      "install": { "plugin": "andrej-karpathy-skills@bee-keeper", "scope": "project" },
+      "requires": [],
+      "signals": { "files": [], "keywords": [] },
+      "optIn": false,
+      "notes": "No hooks."
+    },
+    {
+      "name": "hive-router",
+      "tier": "default",
+      "summary": "Picks the model for each subagent.",
+      "install": { "plugin": "hive-router@bee-keeper", "scope": "project" },
+      "requires": [],
+      "signals": { "files": [], "keywords": [] },
+      "optIn": false,
+      "notes": "Mod with hook modules on engine events: picks subagent models and posts delegation reminders."
+    },
+    {
+      "name": "agent-hud",
+      "tier": "default",
+      "summary": "Status card and /hud panel; depends on hive-router.",
+      "install": { "plugin": "agent-hud@bee-keeper", "scope": "project" },
+      "requires": [],
+      "signals": { "files": [], "keywords": [] },
+      "optIn": false,
+      "notes": "Mod with hook modules on engine events: status card and /hud panel."
+    },
+    {
+      "name": "taste-skill",
+      "tier": "optional",
+      "summary": "Design guidance for frontend and web UI projects.",
+      "install": { "plugin": "taste-skill@bee-keeper", "scope": "project" },
+      "requires": ["node>=22", "chrome-or-chromium"],
+      "signals": {
+        "files": ["tailwind.config.*", "next.config.*", "svelte.config.*", "astro.config.*", "vite.config.*", "index.html"],
+        "keywords": ["dashboard", "landing page", "website", "frontend", "UI", "screens"]
+      },
+      "optIn": false,
+      "notes": "No hooks. Needs network access for images."
+    },
+    {
+      "name": "graphify",
+      "tier": "optional",
+      "summary": "Code knowledge graph for large or unfamiliar codebases.",
+      "install": { "external": ["uv tool install graphifyy", "graphify install"] },
+      "requires": ["python>=3.10", "uv"],
+      "signals": {
+        "files": [],
+        "keywords": ["legacy", "inherited", "unfamiliar"],
+        "minSourceFiles": 500
+      },
+      "optIn": false,
+      "notes": "Not a Claude plugin; the owner runs the commands. Adds a PreToolUse hook before Read/Glob/search, and optional git hooks."
+    },
+    {
+      "name": "caveman",
+      "tier": "optional",
+      "summary": "Terse answers to save tokens.",
+      "install": { "plugin": "caveman@bee-keeper", "scope": "local" },
+      "requires": [],
+      "signals": { "files": [], "keywords": [] },
+      "optIn": true,
+      "notes": "Adds SessionStart and SubagentStart hooks; changes subagent output style. Personal preference, so installed with local scope and not committed."
+    }
+  ]
+}

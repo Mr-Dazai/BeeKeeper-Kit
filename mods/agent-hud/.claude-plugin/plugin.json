@@ -1,0 +1,10 @@
+{
+  "name": "agent-hud",
+  "version": "0.0.1",
+  "author": { "name": "Mr-Dazai" },
+  "description": "Context bar above the prompt plus an agents panel (/hud): the main agent and every subagent with an icon, active/idle state, context fill, tokens and estimated cost, and what the last completed task burned.",
+  "types": "./types/index.d.ts",
+  "dependencies": [
+    "hive-router"
+  ]
+}

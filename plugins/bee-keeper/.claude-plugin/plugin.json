@@ -1,0 +1,14 @@
+{
+  "name": "bee-keeper",
+  "displayName": "Bee Keeper Skill",
+  "version": "0.0.1",
+  "author": { "name": "Mr-Dazai" },
+  "license": "MIT",
+  "description": "Per-project kit: installs the default skills and mods, and bee-scout picks optional skills from your project's plan.",
+  "dependencies": [
+    "superpowers",
+    "andrej-karpathy-skills",
+    "hive-router",
+    "agent-hud"
+  ]
+}
